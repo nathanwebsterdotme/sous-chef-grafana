@@ -437,6 +437,12 @@ signout_redirect_url = <%= @grafana['auth']['signout_redirect_url'] %>
 <% if @grafana['auth']['oauth_auto_login'] %>
 oauth_auto_login = <%= @grafana['auth']['oauth_auto_login'] %>
 <% end %>
+
+# Set the cookie lifetime in days
+<% if @grafana['auth']['login_maximum_lifetime_days'] %>
+login_maximum_lifetime_days = <%= @grafana['auth']['login_maximum_lifetime_days'] %>
+<% end %>
+
 <% end %>
 #################################### Anonymous Auth ######################
 <% if @grafana['auth_anonymous'] %>
